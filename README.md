@@ -28,4 +28,4 @@ prethodno unet tekst, tzv 'clear'.
 
 
 
-grg erg re  dragan sdhfg hgfh grr 334 qq dfghhgkjjhj hgf hgdfjkgjh khgh fhg j
+grg erg re  dragan sdhfg hgfh grr 334  dra qq dfghhgkjjhj hgf hg dra   dfjkgjh khgh fhg j
