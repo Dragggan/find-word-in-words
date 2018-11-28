@@ -17,18 +17,18 @@
 </head>
 <body style="background-color: dimgray">
 <div ng-app="myApp"  ng-controller="myCtrl">
+
     <label for="enterText">Enter text here</label>
     <textarea  id="enterText" name="enterText"  rows="6" cols="50" ng-model="enterText" > </textarea><br/>
     <button type="submit" ng-click="submitedText()">submit text</button><br/>
 
 
     <label for="enterWord">Enter a word to find in text</label>
-    <textarea  id="enterWord"   ng-model="enterWord" >{{}}</textarea>  <br/>
-
-    <button type="submit">submit word</button><br/>
-
+    <textarea  id="enterWord"   ng-model="enterWord" ></textarea>  <br/>
+    <button type="submit" ng-click="submitedWord()">submit word</button><br/>
 
 
+<button ng-click="test()">{{}}</button>
 
 
 
@@ -40,7 +40,28 @@
     var app = angular.module('myApp', []);
 
     app.controller('myCtrl', function($scope) {
-        $scope.enterWord =$scope.enterText;
+
+        var arr1= [];
+        var arr2 = [];
+
+        $scope.submitedText = function(){
+            arr1.push($scope.enterText);
+            console.log( arr1 )
+            /* $scope.enterWord = $scope.enterText;*/
+        };
+
+
+        $scope.submitedWord = function(){
+
+            arr2.push($scope.enterWord);
+            console.log( arr2 )
+            /* $scope.enterWord = $scope.enterText;*/
+        };
+
+        $scope.test = function () {
+          console.log( arr1 + "   - " + arr2 )
+        }
+
     });
 
 
