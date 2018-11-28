@@ -19,7 +19,7 @@
 <div ng-app="myApp"  ng-controller="myCtrl">
 
     <label for="enterText">Enter text here</label>
-    <textarea  id="enterText" name="enterText"  rows="6" cols="50" ng-model="enterText" > </textarea><br/>
+    <textarea  id="enterText" name="enterText"  rows="6" cols="50" ng-model="enterText"> </textarea><br/>
     <button type="submit" ng-click="submitedText()">submit text</button><br/>
 
 
@@ -28,8 +28,10 @@
     <button type="submit" ng-click="submitedWord()">submit word</button><br/>
 
 
-<button ng-click="test()">{{}}</button>
-
+<button ng-click="test()" >search{{}}</button>
+    <h2 ng-model="warningMesage">{{warningMesage}}</h2>
+<h2>{{words}}</h2>
+<h2>{{wordsCount}}</h2>
 
 
 
@@ -42,26 +44,35 @@
     app.controller('myCtrl', function($scope) {
 
         var arr1= [];
-        var arr2 = [];
+        var word = '';
 
         $scope.submitedText = function(){
             arr1.push($scope.enterText);
-            console.log( arr1 )
+            arr1 = arr1[0].split(" ");
+
+          /*  console.log( arr1 )*/
             /* $scope.enterWord = $scope.enterText;*/
         };
 
 
         $scope.submitedWord = function(){
-
-            arr2.push($scope.enterWord);
-            console.log( arr2 )
-            /* $scope.enterWord = $scope.enterText;*/
+            word += $scope.enterWord;
         };
 
         $scope.test = function () {
-          console.log( arr1 + "   - " + arr2 )
-        }
+           /* if (arr1.length === 0 || arr2.length === 0 ){
+                $scope.warningMesage =  ' you must ...'
+            }*/
 
+
+            var arr12 = arr1.filter( w => w === word  );
+console.log(  arr12 )
+
+$scope.words = arr12;
+$scope.wordsCount = arr12.length;
+
+
+        }
     });
 
 
