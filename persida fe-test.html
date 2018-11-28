@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <style>
+
+
+
+        textarea.ng-touched {
+            color: red;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <title>Persida test </title>
+</head>
+<body style="background-color: dimgray">
+<div ng-app="myApp"  ng-controller="myCtrl">
+    <label for="enterText">Enter text here</label>
+    <textarea  id="enterText" name="enterText"  rows="6" cols="50" ng-model="enterText" > </textarea><br/>
+    <button type="submit" ng-click="submitedText()">submit text</button><br/>
+
+
+    <label for="enterWord">Enter a word to find in text</label>
+    <textarea  id="enterWord"   ng-model="enterWord" >{{}}</textarea>  <br/>
+
+    <button type="submit">submit word</button><br/>
+
+
+
+
+
+
+
+</div>
+
+<script>
+
+    var app = angular.module('myApp', []);
+
+    app.controller('myCtrl', function($scope) {
+        $scope.enterWord =$scope.enterText;
+    });
+
+
+
+
+
+
+    
+/*        app.controller('myCtrl', function($scope, aa) {
+       $scope.submitedText = function () {
+         $scope.enterWord = $scope.enterText;
+       }
+    });*/
+
+
+
+
+</script>
+
+
+
+</body>
+</html>
