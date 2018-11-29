@@ -375,9 +375,11 @@
         textarea{
             margin-bottom: 5px;
         }
+
         h3{
             margin-top: 15px;
         }
+
     </style>
     <meta charset="UTF-8">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
@@ -407,8 +409,13 @@
     <button ng-click="findWords()" class="btn btn-lg btn-success">search</button>
     <button ng-click="clear()" class="btn btn-lg  btn-danger">clear</button>
     <h4 ng-show="!words" class="warningMesage">{{warningMesage}}</h4>
+
     <h3 ng-show="words"> search for: "{{words}}"</h3>
     <h3 ng-show="words">founded word "{{words}}"  {{wordsCount}} time/times in text</h3>
+
+    <h2 ng-show="words"> search for: "{{words}}"</h2>
+    <h2 ng-show="words">founded word "{{words}}"  {{wordsCount}} time/times in text</h2>
+
 
 
 </div>
