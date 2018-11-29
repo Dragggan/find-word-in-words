@@ -357,7 +357,6 @@
     </style>
     <style>
 
-
         .btn {
             position: relative;
             top: -15px;
@@ -390,12 +389,9 @@
 <body style="background-color: dimgray">
 <div ng-app="myApp" ng-controller="myCtrl" class="m-3">
 
-
-    <textarea id="enterText" name="enterText" rows="6" cols="50" ng-model="enterText"
-              ng-disabled="isDisabled"> </textarea>
+    <textarea id="enterText" name="enterText" rows="6" cols="50" ng-model="enterText" ng-disabled="isDisabled"> </textarea>
     <label for="enterText">Enter text here</label><br>
-    <button type="submit" ng-click="submitedText()" class="btn btn-sm btn-primary" ng-disabled="isDisabled">submit
-        text
+    <button type="submit" ng-click="submitedText()" class="btn btn-sm btn-primary" ng-disabled="isDisabled">submit text
     </button>
     <br/>
 
@@ -413,8 +409,6 @@
     <h3 ng-show="words"> search for: "{{words}}"</h3>
     <h3 ng-show="words">founded word "{{words}}"  {{wordsCount}} time/times in text</h3>
 
-    <h2 ng-show="words"> search for: "{{words}}"</h2>
-    <h2 ng-show="words">founded word "{{words}}"  {{wordsCount}} time/times in text</h2>
 
 
 
